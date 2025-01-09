@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { getDataFromFirestore } from "../../lib/firestore";
+import { GetServerSideProps } from "next";
 
-export async function getServerSideProps() {
+export const getServerSideProps: GetServerSideProps = async () => {
   const data = await getDataFromFirestore();
   return {
     props: { data }
   };
-}
+};
 
 export default function Home() {
   return (
