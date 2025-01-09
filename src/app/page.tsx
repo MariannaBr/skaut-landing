@@ -8,7 +8,7 @@ export async function getServerSideProps() {
   };
 }
 
-export default function Home({ data }) {
+export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
@@ -105,11 +105,11 @@ export default function Home({ data }) {
         </a>
       </footer>
       <h1>Firestore Data</h1>
-      <ul>
+      {/* <ul>
         {data.map((item) => (
           <li key={item.id}>{JSON.stringify(item)}</li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
