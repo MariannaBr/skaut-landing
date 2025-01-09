@@ -1,13 +1,5 @@
 import Image from "next/image";
 import { getDataFromFirestore } from "../../lib/firestore";
-import { GetServerSideProps } from "next";
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const data = await getDataFromFirestore();
-//   return {
-//     props: { data }
-//   };
-// };
 
 export default async function Home() {
   const data = await getDataFromFirestore();
@@ -108,11 +100,10 @@ export default async function Home() {
         </a>
       </footer>
       <h1>Firestore Data</h1>
-      {/* <ul>
-        {data.map((item) => (
-          <li key={item.id}>{JSON.stringify(item)}</li>
-        ))}
-      </ul> */}
+      <ul>
+        {data &&
+          data.map((item) => <li key={item.id}>{JSON.stringify(item)}</li>)}
+      </ul>
     </div>
   );
 }
