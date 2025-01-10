@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { GetServerSideProps } from "next";
 import { getDataFromFirestore } from "../lib/firestore";
 import { SectionData, survey } from "../lib/defaults";
@@ -17,7 +17,7 @@ type Props = {
   survey: SectionData[];
 };
 
-const Homepage: React.FC<Props> = (props) => {
+const Homepage: React.FC<Props> = () => {
   return (
     <div className="bg-white ">
       <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56">
