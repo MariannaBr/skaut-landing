@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { GetServerSideProps } from "next";
 import { getDataFromFirestore } from "../lib/firestore";
+import { SectionData, survey } from "../lib/defaults";
+import Section from "../components/Section";
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const data = await getDataFromFirestore();
 
   return {
@@ -12,60 +14,118 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 
 type Props = {
   data: [];
+  survey: SectionData[];
 };
 
 const Homepage: React.FC<Props> = (props) => {
   return (
-    <div className="max-h-screen">
-      <div className="relative bg-white">
-        <div className="mx-auto max-w-7xl lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-          <div className="px-6 pb-24 pt-10 sm:pb-32 lg:col-span-7 lg:px-0 lg:pb-48 lg:pt-40 xl:col-span-6">
-            <div className="mx-auto max-w-lg lg:mx-0">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-                className="h-11"
-              />
-              <div className="hidden sm:mt-32 sm:flex lg:mt-16">
-                <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                  Anim aute id magna aliqua ad ad non deserunt sunt.{" "}
-                  <a
-                    href="#"
-                    className="whitespace-nowrap font-semibold text-indigo-600"
-                  >
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-              </div>
-              <h1 className="mt-24 text-pretty text-5xl font-semibold tracking-tight text-gray-900 sm:mt-10 sm:text-7xl">
-                Data to enrich your business
-              </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
-              </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <a
-                  href="#"
-                  className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Get started
-                </a>
-                <a href="#" className="text-sm/6 font-semibold text-gray-900">
-                  Learn more <span aria-hidden="true">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="relative lg:col-span-5 lg:-mr-8 xl:absolute xl:inset-0 xl:left-1/2 xl:mr-0">
-            <img
-              alt=""
-              src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2102&q=80"
-              className="aspect-[3/2] w-full bg-gray-50 object-cover lg:absolute lg:inset-0 lg:aspect-auto lg:h-full"
-            />
+    <div className="bg-white ">
+      <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56">
+        <div className="text-center">
+          <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
+            How do you handle hormone changes during your menstrual cycle?
+          </h1>
+          <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+            Every woman is different...there are four types, each represented by
+            beautiful flower. Which one are you?
+          </p>
+          <div className="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Get started
+            </a>
           </div>
         </div>
+      </div>
+
+      <div className="flex mx-auto justify-center max-w-7xl mb-20">
+        <form>
+          <div className="space-y-12">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+              <div>
+                <h2 className="text-base/7 font-semibold text-gray-900">
+                  Little bit about you
+                </h2>
+              </div>
+
+              <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+                <div className="sm:col-span-3">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Name
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autoComplete="given-name"
+                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                    />
+                  </div>
+                </div>
+
+                <div className="sm:col-span-4">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Email address
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                    />
+                  </div>
+                </div>
+
+                <div className="col-span-full">
+                  <label
+                    htmlFor="age"
+                    className="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Age
+                  </label>
+                  <div className="mt-2">
+                    <input
+                      id="age"
+                      name="age"
+                      type="text"
+                      autoComplete="age"
+                      className="block w-1/5 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            {survey.map((item) => (
+              <Section key={item.title} section={item} />
+            ))}
+
+            <div className="mt-6 mb-20 flex items-center justify-end gap-x-6">
+              <button
+                type="button"
+                className="text-sm/6 font-semibold text-gray-900"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
