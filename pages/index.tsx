@@ -3,6 +3,7 @@ import { GetServerSideProps } from "next";
 import { getDataFromFirestore } from "../lib/firestore";
 import { SectionData, survey } from "../lib/defaults";
 import Section from "../components/Section";
+import Hero from "../components/Hero";
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const data = await getDataFromFirestore();
@@ -20,27 +21,9 @@ type Props = {
 const Homepage: React.FC<Props> = () => {
   return (
     <div className="bg-white ">
-      <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-56">
-        <div className="text-center">
-          <h1 className="text-balance text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
-            How do you handle hormone changes during your menstrual cycle?
-          </h1>
-          <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
-            Every woman is different...there are four types, each represented by
-            beautiful flower. Which one are you?
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Get started
-            </a>
-          </div>
-        </div>
-      </div>
+      <Hero />
 
-      <div className="flex mx-auto justify-center max-w-7xl mb-20">
+      <div className="flex mx-auto justify-center max-w-7xl mb-20 px-8 xl:px-0 py-10 shadow-2xl shadow-teal-200 rounded-2xl">
         <form>
           <div className="space-y-12">
             <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
@@ -64,7 +47,7 @@ const Homepage: React.FC<Props> = () => {
                       name="name"
                       type="text"
                       autoComplete="given-name"
-                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm/6"
                     />
                   </div>
                 </div>
@@ -82,7 +65,7 @@ const Homepage: React.FC<Props> = () => {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm/6"
                     />
                   </div>
                 </div>
@@ -100,7 +83,7 @@ const Homepage: React.FC<Props> = () => {
                       name="age"
                       type="text"
                       autoComplete="age"
-                      className="block w-1/5 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                      className="block w-1/5 rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-pink-500 sm:text-sm/6"
                     />
                   </div>
                 </div>
@@ -119,7 +102,7 @@ const Homepage: React.FC<Props> = () => {
               </button>
               <button
                 type="submit"
-                className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-pink-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
               >
                 Save
               </button>
