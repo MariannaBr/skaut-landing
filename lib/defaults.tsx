@@ -9,6 +9,17 @@ export type Question = {
   answers: string[];
 };
 
+export interface SurveyFormData {
+  name?: string;
+  email?: string;
+  age?: string;
+  responses: Record<string, Record<string, string>>; // Section title -> Question ID -> Answer
+}
+
+export interface FormComponentProps {
+  survey: SectionData[];
+}
+
 export const survey: SectionData[] = [
   {
     title: "General Experience with the Menstrual Cycle",
