@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
           <meta name="robots" content="index, follow" />
         </Head>
-        <body>
+        <body className="bg-white">
           <Main />
           <NextScript />
         </body>
