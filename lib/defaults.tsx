@@ -665,6 +665,126 @@ export const survey: SectionData[] = [
         ]
       }
     ]
+  },
+  {
+    title: "Impact on the Relationship",
+    questions: [
+      {
+        question:
+          "Do you feel that your hormonal changes during your menstrual cycle have an impact on your relationship with your partner?",
+        id: "11_1",
+        answers: [
+          {
+            answer: "No, there is no noticeable impact on our relationship.",
+            points: 1
+          },
+          {
+            answer: "Sometimes, but it doesn't create any significant issues.",
+            points: 2
+          },
+          {
+            answer: "Yes, it causes occasional tension or misunderstandings.",
+            points: 3
+          },
+          {
+            answer:
+              "Yes, it significantly affects our relationship and causes frequent challenges.",
+            points: 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: "Desire for Support from Partner",
+    questions: [
+      {
+        question:
+          "Would you like more support from your partner during the emotional or physical challenges of your menstrual cycle?",
+        id: "12_1",
+        answers: [
+          {
+            answer: "No, I feel like I can manage on my own.",
+            points: 1
+          },
+          {
+            answer: "Occasionally, but it's not something I need often.",
+            points: 2
+          },
+          {
+            answer:
+              "Yes, I would appreciate more emotional or physical support.",
+            points: 3
+          },
+          {
+            answer:
+              "Yes, I need consistent support to feel better during my cycle.",
+            points: 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: "Ideal Form of Support from Partner",
+    questions: [
+      {
+        question:
+          "In what ways would you like your partner to support you during your menstrual cycle (e.g., emotionally, physically, helping with tasks)?",
+        id: "13_1",
+        answers: [
+          {
+            answer: "No support needed—I'm fine handling it myself.",
+            points: 1
+          },
+          {
+            answer: "Emotional support—listening to me and offering comfort.",
+            points: 2
+          },
+          {
+            answer:
+              "Physical support—helping with tasks or providing comfort measures (e.g., heat packs, food).",
+            points: 3
+          },
+          {
+            answer:
+              "Both emotional and physical support—active involvement in managing symptoms.",
+            points: 4
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: "Partner's Knowledge of Hormonal Changes",
+    questions: [
+      {
+        question:
+          "Do you think your partner should be notified about the hormonal changes you experience during your menstrual cycle, so they can better understand and support you?",
+        id: "14_1",
+        answers: [
+          {
+            answer: "No, I prefer to handle it on my own.",
+            points: 1
+          },
+          {
+            answer:
+              "Yes, but only when necessary or during significant changes.",
+            points: 2
+          },
+          {
+            answer:
+              "Yes, I think it's important for my partner to understand and be informed.",
+            points: 3
+          },
+          {
+            answer:
+              "Yes, I believe that open communication about these changes will improve our relationship.",
+            points: 4
+          }
+        ]
+      }
+    ]
   }
 ];
 

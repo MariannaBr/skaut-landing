@@ -84,9 +84,9 @@ export default function Form({ survey }: FormComponentProps) {
         totalPoints += answer.points;
       });
     });
-    if (totalPoints < 43) return "A";
-    if (totalPoints < 62) return "B";
-    if (totalPoints < 81) return "C";
+    if (totalPoints < 44) return "A";
+    if (totalPoints < 72) return "B";
+    if (totalPoints < 93) return "C";
     return "D";
   };
 
@@ -101,13 +101,13 @@ export default function Form({ survey }: FormComponentProps) {
         <div className="space-y-12">
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
             <div>
-              <h2 className="text-base/7 font-semibold text-gray-900">
+              <h3 className="text-base/7 font-semibold text-gray-900">
                 Little bit about you
-              </h2>
+              </h3>
             </div>
 
             <div className="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
-              <div className="sm:col-span-3">
+              <div className="sm:col-span-4">
                 <label
                   htmlFor="name"
                   className="block text-sm/6 font-medium text-gray-900"
@@ -171,9 +171,9 @@ export default function Form({ survey }: FormComponentProps) {
               className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
             >
               <div>
-                <h2 className="text-base/7 font-semibold text-gray-900">
+                <h3 className="text-base/7 font-semibold text-gray-900">
                   {section.title}
-                </h2>
+                </h3>
               </div>
 
               <div className="max-w-2xl space-y-10 md:col-span-2">
