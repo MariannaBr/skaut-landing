@@ -15,16 +15,16 @@ const Hero: React.FC = () => {
               How do you handle hormone changes?
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-              Every woman reacts to the changes during the menstrual cycle
-              differently...there are four types, each represented by beautiful
-              flower. Which one are you?
+              Every woman experiences the changes of the menstrual cycle in her
+              own unique way. There are four distinct types, each symbolized by
+              a beautiful flower. Which one resonates with you?
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="#form-section"
                 className="rounded-md bg-pink-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
               >
-                Let's find out
+                Let&apos;s find out
               </a>
             </div>
           </div>

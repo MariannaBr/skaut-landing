@@ -77,10 +77,8 @@ export default function Form({ survey }: FormComponentProps) {
     >
   ) => {
     let totalPoints = 0;
-    let totalAnswers = 0;
     Object.values(responses).map((response) => {
       Object.values(response).map((answer) => {
-        totalAnswers += 1;
         totalPoints += answer.points;
       });
     });

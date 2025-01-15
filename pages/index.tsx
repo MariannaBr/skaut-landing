@@ -9,7 +9,7 @@ const Homepage: React.FC = () => {
       <Hero />
       <div id="form-section" className="flex mx-auto justify-center">
         <h2 className="text-pretty text-xl font-semibold tracking-tight text-gray-900 md:text-3xl py-6 lg:py-20">
-          Let's Explore Your Hormonal Journey
+          Let&apos;s Explore Your Hormonal Journey
         </h2>
       </div>
       <div className="flex mx-4 xl:mx-auto justify-center max-w-7xl mb-20 px-4 xl:px-0 py-10 shadow-2xl shadow-teal-200 rounded-2xl">
