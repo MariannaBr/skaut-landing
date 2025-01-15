@@ -29,8 +29,8 @@ export const survey: SectionData[] = [
           "How would you describe the impact of your menstrual cycle on your overall mood and mental state?",
         id: "general_1",
         answers: [
-          "I don’t notice any changes in mood or mental state.",
-          "I notice slight changes, but they don’t affect my daily life.",
+          "I don't notice any changes in mood or mental state.",
+          "I notice slight changes, but they don't affect my daily life.",
           "I experience noticeable mood changes that sometimes affect my daily life.",
           "My mood changes are severe and significantly disrupt my daily life."
         ]
@@ -40,9 +40,9 @@ export const survey: SectionData[] = [
           "Do you track changes in your mood or mental state during your cycle?",
         id: "general_2",
         answers: [
-          "No, I don’t notice any changes to track.",
-          "Occasionally, but I don’t see strong patterns.",
-          "Yes, I’ve noticed patterns that vary during the cycle.",
+          "No, I don't notice any changes to track.",
+          "Occasionally, but I don't see strong patterns.",
+          "Yes, I've noticed patterns that vary during the cycle.",
           "Yes, and the changes are consistent and impactful."
         ]
       }
@@ -79,7 +79,7 @@ export const survey: SectionData[] = [
         id: "emotional_3",
         answers: [
           "Never.",
-          "Occasionally, but they don’t interfere with my life.",
+          "Occasionally, but they don't interfere with my life.",
           "Often, and they sometimes interfere with my life.",
           "Very often, and they severely interfere with my life."
         ]
@@ -106,7 +106,7 @@ export const survey: SectionData[] = [
         id: "physical_2",
         answers: [
           "Never.",
-          "Occasionally, but they’re not strong.",
+          "Occasionally, but they're not strong.",
           "Often, and they are noticeable.",
           "Very often, and they strongly affect my eating habits."
         ]
@@ -165,9 +165,9 @@ export const survey: SectionData[] = [
         id: "changes_1",
         answers: [
           "Never.",
-          "Rarely, and it’s manageable.",
-          "Sometimes, and it’s noticeable.",
-          "Often, and it’s difficult to manage."
+          "Rarely, and it's manageable.",
+          "Sometimes, and it's noticeable.",
+          "Often, and it's difficult to manage."
         ]
       },
       {
@@ -176,7 +176,7 @@ export const survey: SectionData[] = [
         id: "changes_2",
         answers: [
           "Never.",
-          "Rarely, and it’s mild.",
+          "Rarely, and it's mild.",
           "Sometimes, and it causes occasional tension.",
           "Often, and it leads to significant challenges."
         ]
@@ -187,7 +187,7 @@ export const survey: SectionData[] = [
         id: "changes_3",
         answers: [
           "No, I feel the same throughout the month.",
-          "Occasionally, but it doesn’t significantly affect me.",
+          "Occasionally, but it doesn't significantly affect me.",
           "Often, and it affects my energy and focus.",
           "Very often, and it significantly disrupts my work or goals."
         ]
@@ -198,7 +198,7 @@ export const survey: SectionData[] = [
         id: "changes_4",
         answers: [
           "No, my concentration is consistent.",
-          "Occasionally, but it’s manageable.",
+          "Occasionally, but it's manageable.",
           "Often, and it noticeably impacts my work or studies.",
           "Very often, and it severely disrupts my ability to think clearly."
         ]
@@ -213,10 +213,10 @@ export const survey: SectionData[] = [
           "How often do you rely on specific coping mechanisms (e.g., rest, exercise, medications, or supplements) to manage menstrual-related symptoms?",
         id: "coping-mechanisms",
         answers: [
-          "Never—I don’t need any.",
+          "Never—I don't need any.",
           "Rarely, and only for mild discomfort.",
           "Often, and they help manage noticeable symptoms.",
-          "Very often, and they’re necessary for me to function."
+          "Very often, and they're necessary for me to function."
         ]
       },
       {
@@ -226,8 +226,8 @@ export const survey: SectionData[] = [
         answers: [
           "Yes, I feel completely in control.",
           "Yes, but I only experience mild changes.",
-          "Somewhat—it’s predictable but can still be difficult to manage.",
-          "No, I feel out of control and unable to predict how I’ll feel."
+          "Somewhat—it's predictable but can still be difficult to manage.",
+          "No, I feel out of control and unable to predict how I'll feel."
         ]
       },
       {
@@ -235,7 +235,7 @@ export const survey: SectionData[] = [
           "How often do you plan your activities, work, or social life around your menstrual cycle?",
         id: "plan-activities",
         answers: [
-          "Never—I don’t need to.",
+          "Never—I don't need to.",
           "Rarely, but I might adjust a little.",
           "Often, as symptoms impact my ability to perform.",
           "Very often, as symptoms heavily dictate what I can do."
@@ -252,8 +252,8 @@ export const survey: SectionData[] = [
         id: "energy-levels",
         answers: [
           "Never—I feel consistent energy throughout.",
-          "Rarely, and it’s mild.",
-          "Often, and it’s noticeable.",
+          "Rarely, and it's mild.",
+          "Often, and it's noticeable.",
           "Very often, and it significantly impacts my daily life."
         ]
       },
@@ -263,7 +263,7 @@ export const survey: SectionData[] = [
         id: "sleep-disturbances",
         answers: [
           "Never—I sleep consistently well.",
-          "Rarely, and it doesn’t affect me much.",
+          "Rarely, and it doesn't affect me much.",
           "Often, and it affects my ability to rest.",
           "Very often, and it disrupts my sleep significantly."
         ]
@@ -274,7 +274,7 @@ export const survey: SectionData[] = [
         id: "physical-pain",
         answers: [
           "Never.",
-          "Rarely, and it’s manageable.",
+          "Rarely, and it's manageable.",
           "Often, and it affects my mood noticeably.",
           "Very often, and it severely impacts my mood and mental state."
         ]
@@ -289,10 +289,10 @@ export const survey: SectionData[] = [
           "How often do you feel that your mental or physical symptoms are misunderstood or dismissed by others (e.g., friends, family, coworkers)?",
         id: "misunderstood-symptoms",
         answers: [
-          "Never—I don’t experience symptoms that require explanation.",
-          "Rarely—it’s not much of an issue for me.",
+          "Never—I don't experience symptoms that require explanation.",
+          "Rarely—it's not much of an issue for me.",
           "Sometimes, and it can feel frustrating.",
-          "Often, and it’s a significant source of stress or isolation."
+          "Often, and it's a significant source of stress or isolation."
         ]
       },
       {
@@ -301,7 +301,7 @@ export const survey: SectionData[] = [
         id: "self-image-impact",
         answers: [
           "Never—I feel the same throughout my cycle.",
-          "Rarely, and it’s not noticeable.",
+          "Rarely, and it's not noticeable.",
           "Often, and it affects how I see myself.",
           "Very often, and it significantly lowers my confidence."
         ]
@@ -311,10 +311,10 @@ export const survey: SectionData[] = [
           "Have you ever sought professional help (e.g., doctor, therapist) to manage symptoms related to your menstrual cycle?",
         id: "professional-help",
         answers: [
-          "No, I’ve never needed to.",
-          "No, but I’ve considered it.",
-          "Yes, and it’s been somewhat helpful.",
-          "Yes, and it’s been essential for managing my symptoms."
+          "No, I've never needed to.",
+          "No, but I've considered it.",
+          "Yes, and it's been somewhat helpful.",
+          "Yes, and it's been essential for managing my symptoms."
         ]
       }
     ]
@@ -327,10 +327,10 @@ export const survey: SectionData[] = [
           "Over the past year, how would you rate the consistency of your menstrual-related symptoms?",
         id: "symptom-consistency",
         answers: [
-          "They’ve been consistently mild or nonexistent.",
-          "They’ve been mostly mild with occasional moderate symptoms.",
-          "They’ve been consistently moderate with some severe episodes.",
-          "They’ve been consistently severe and disruptive."
+          "They've been consistently mild or nonexistent.",
+          "They've been mostly mild with occasional moderate symptoms.",
+          "They've been consistently moderate with some severe episodes.",
+          "They've been consistently severe and disruptive."
         ]
       },
       {
@@ -338,12 +338,71 @@ export const survey: SectionData[] = [
           "Do you feel your symptoms are improving, worsening, or staying the same over time?",
         id: "symptom-trend",
         answers: [
-          "I don’t experience symptoms.",
-          "They’ve stayed the same or improved slightly.",
-          "They’ve become slightly worse.",
-          "They’ve become significantly worse over time."
+          "I don't experience symptoms.",
+          "They've stayed the same or improved slightly.",
+          "They've become slightly worse.",
+          "They've become significantly worse over time."
         ]
       }
     ]
+  }
+];
+
+export type Flower = {
+  flower: string;
+  image: string;
+  description: string;
+  advice: string;
+};
+
+export type FlowerType = {
+  type: string;
+  data: Flower;
+};
+
+export const flowerTypes: FlowerType[] = [
+  {
+    type: "A",
+    data: {
+      flower: "Sunflower",
+      image: "/sunflower.png",
+      description:
+        "The sunflower symbolizes consistency, strength, and positivity. Just as the sunflower remains steady, always turning toward the sun, you exhibit resilience and stability regardless of hormonal fluctuations.",
+      advice:
+        "Keep embracing your stability and use your strength to inspire those around you."
+    }
+  },
+  {
+    type: "B",
+    data: {
+      flower: "Cherry Blossom",
+      image: "/cherry.png",
+      description:
+        "Cherry blossoms represent grace, subtle beauty, and fleeting change. You experience mild, manageable shifts during your cycle, much like the delicate and temporary bloom of the cherry blossom.",
+      advice:
+        "Focus on mindfulness practices to enhance your ability to adapt gracefully to changes."
+    }
+  },
+  {
+    type: "C",
+    data: {
+      flower: "Lavender",
+      image: "/lavender.png",
+      description:
+        "Lavender symbolizes calmness and balance, often associated with managing stress or noticeable shifts. You may experience stronger changes, but your predictability allows you to maintain balance and harmony over time.",
+      advice:
+        "Prioritize self-care routines that enhance your sense of calm and balance."
+    }
+  },
+  {
+    type: "D",
+    data: {
+      flower: "Poppy",
+      image: "/poppy.png",
+      description:
+        "Poppies represent remembrance, resilience, and rest. They symbolize the need for recovery and peace after enduring intense struggles, which aligns with your experience.",
+      advice:
+        "Take time to rest and recharge, ensuring you honor your need for recovery during challenging times."
+    }
   }
 ];

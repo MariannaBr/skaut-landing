@@ -1,23 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Form from "../components/Form";
-import { survey, SurveyFormData } from "../lib/defaults";
-import { getDataFromFirestore } from "../lib/firestore";
-import { GetServerSideProps } from "next";
-import { collection, addDoc } from "firebase/firestore";
-import { db } from "../lib/firebaseConfig.js";
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const data = await getDataFromFirestore();
-
-//   return {
-//     props: { data }
-//   };
-// };
-
-// type Props = {
-//   data: SurveyFormData[];
-// };
+import { survey } from "../lib/defaults";
 
 const Homepage: React.FC = () => {
   return (
