@@ -1,4 +1,5 @@
 import React from "react";
+import { title, paragraph, buttonText } from "../lib/defaults";
 
 const Hero: React.FC = () => {
   return (
@@ -12,19 +13,17 @@ const Hero: React.FC = () => {
         <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
           <div className="relative w-full lg:max-w-xl lg:shrink-0 xl:max-w-2xl">
             <h1 className="text-pretty text-3xl font-semibold tracking-tight text-gray-900 md:text-7xl">
-              How do you handle hormone changes?
+              {title}
             </h1>
             <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:max-w-md sm:text-xl/8 lg:max-w-none">
-              Every woman experiences the changes of the menstrual cycle in her
-              own unique way. There are four distinct types, each symbolized by
-              a beautiful flower. Which one resonates with you?
+              {paragraph}
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <a
                 href="#form-section"
                 className="rounded-md bg-pink-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
               >
-                Let&apos;s find out
+                {buttonText}
               </a>
             </div>
           </div>

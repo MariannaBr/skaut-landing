@@ -1,19 +1,18 @@
 import React from "react";
-import { FormComponentProps, SurveyFormData } from "../lib/defaults";
-// import { GetServerSideProps } from "next";
-// import { getDataFromFirestore } from "../lib/firestore";
+import {
+  FormComponentProps,
+  SurveyFormData,
+  titleAge,
+  titleCancel,
+  titleEmail,
+  titleName,
+  titlePersonal,
+  titleSubmit
+} from "../lib/defaults";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../lib/firebaseConfig.js";
 import { useState, ChangeEvent, FormEvent } from "react";
 import ResultPopup from "./ResultPopup";
-
-// export const getServerSideProps: GetServerSideProps = async () => {
-//   const data = await getDataFromFirestore();
-
-//   return {
-//     props: { data }
-//   };
-// };
 
 export default function Form({ survey }: FormComponentProps) {
   const [formData, setFormData] = useState<SurveyFormData>({
@@ -69,7 +68,6 @@ export default function Form({ survey }: FormComponentProps) {
     setIsResultPopupOpen(false);
   };
 
-  // Mock function to determine user type based on survey
   const determineUserType = (
     responses: Record<
       string,
@@ -100,7 +98,7 @@ export default function Form({ survey }: FormComponentProps) {
           <div className="grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
             <div>
               <h3 className="text-base/7 font-semibold text-gray-900">
-                Little bit about you
+                {titlePersonal}
               </h3>
             </div>
 
@@ -110,7 +108,7 @@ export default function Form({ survey }: FormComponentProps) {
                   htmlFor="name"
                   className="block text-sm/6 font-medium text-gray-900"
                 >
-                  Name
+                  {titleName}
                 </label>
                 <div className="mt-2">
                   <input
@@ -129,7 +127,7 @@ export default function Form({ survey }: FormComponentProps) {
                   htmlFor="email"
                   className="block text-sm/6 font-medium text-gray-900"
                 >
-                  Email address
+                  {titleEmail}
                 </label>
                 <div className="mt-2">
                   <input
@@ -148,7 +146,7 @@ export default function Form({ survey }: FormComponentProps) {
                   htmlFor="age"
                   className="block text-sm/6 font-medium text-gray-900"
                 >
-                  Age
+                  {titleAge}
                 </label>
                 <div className="mt-2">
                   <input
@@ -225,13 +223,13 @@ export default function Form({ survey }: FormComponentProps) {
               }
               className="text-sm/6 font-semibold text-gray-900"
             >
-              Cancel
+              {titleCancel}
             </button>
             <button
               type="submit"
               className="rounded-md bg-pink-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600"
             >
-              Submit
+              {titleSubmit}
             </button>
           </div>
         </div>

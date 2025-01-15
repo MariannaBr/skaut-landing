@@ -5,7 +5,7 @@ import {
   Transition,
   TransitionChild
 } from "@headlessui/react";
-import { flowerTypes } from "../lib/defaults";
+import { flowerTypes, titleClose, titleResult } from "../lib/defaults";
 
 type Props = {
   flowerType: string;
@@ -54,7 +54,7 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                         alt="logo"
                       />
                       <h2 className="text-center self-center text-2xl md:text-6xl font-bold tracking-tight text-pink-600">
-                        You Are {selectedFlower?.flower}
+                        {titleResult} {selectedFlower?.flower}
                       </h2>
                     </div>
 
@@ -80,7 +80,7 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                       className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-gray-600 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
                       onClick={onClose}
                     >
-                      Close
+                      {titleClose}
                     </button>
                   </div>
                 </DialogPanel>

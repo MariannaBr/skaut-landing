@@ -1,3 +1,18 @@
+export const title = "How Do You Handle PMS?";
+export const paragraph =
+  "You experience the changes  of the menstrual cycle in your own unique way. There are four distinct types, each symbolized by a beautiful flower. Which one resonates with you?";
+export const buttonText = "Let's Find Out";
+export const formTitle =
+  "Discover Your Flower and Get Advice in Just 3 Minutes";
+export const titlePersonal = "Little Bit About You";
+export const titleName = "Name";
+export const titleEmail = "Email Address";
+export const titleAge = "Age";
+export const titleCancel = "Cancel";
+export const titleSubmit = "Submit";
+export const titleResult = "You Are";
+export const titleClose = "Close";
+
 export type SectionData = {
   title: string;
   questions: Question[];
