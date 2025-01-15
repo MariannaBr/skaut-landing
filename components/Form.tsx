@@ -1,11 +1,7 @@
 import React from "react";
-import {
-  FormComponentProps,
-  SurveyFormData,
-  flowerTypes
-} from "../lib/defaults";
-import { GetServerSideProps } from "next";
-import { getDataFromFirestore } from "../lib/firestore";
+import { FormComponentProps, SurveyFormData } from "../lib/defaults";
+// import { GetServerSideProps } from "next";
+// import { getDataFromFirestore } from "../lib/firestore";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../lib/firebaseConfig.js";
 import { useState, ChangeEvent, FormEvent } from "react";
@@ -35,7 +31,8 @@ export default function Form({ survey }: FormComponentProps) {
   const handleRadioChange = (
     sectionTitle: string,
     questionId: string,
-    value: string
+    value: string,
+    points: number
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -43,7 +40,7 @@ export default function Form({ survey }: FormComponentProps) {
         ...prev.responses,
         [sectionTitle]: {
           ...prev.responses[sectionTitle],
-          [questionId]: value
+          [questionId]: { answer: value, points: points }
         }
       }
     }));
@@ -56,7 +53,7 @@ export default function Form({ survey }: FormComponentProps) {
     e.preventDefault();
     try {
       await addDoc(collection(db, "users"), formData);
-      const userType = determineUserType();
+      const userType = determineUserType(formData.responses);
 
       setflowerType(userType);
 
@@ -73,9 +70,24 @@ export default function Form({ survey }: FormComponentProps) {
   };
 
   // Mock function to determine user type based on survey
-  const determineUserType = () => {
-    // Replace with actual logic based on survey data
-    return "A"; // Example: User is Type A
+  const determineUserType = (
+    responses: Record<
+      string,
+      Record<string, { answer: string; points: number }>
+    >
+  ) => {
+    let totalPoints = 0;
+    let totalAnswers = 0;
+    Object.values(responses).map((response) => {
+      Object.values(response).map((answer) => {
+        totalAnswers += 1;
+        totalPoints += answer.points;
+      });
+    });
+    if (totalPoints < 43) return "A";
+    if (totalPoints < 62) return "B";
+    if (totalPoints < 81) return "C";
+    return "D";
   };
 
   return (
@@ -177,17 +189,17 @@ export default function Form({ survey }: FormComponentProps) {
                             id={`${sectionIndex}-${question.id}-${index}`}
                             name={question.id}
                             type="radio"
-                            value={answer}
+                            value={answer.answer}
                             checked={
-                              formData.responses[section.title]?.[
-                                question.id
-                              ] === answer
+                              formData.responses[section.title]?.[question.id]
+                                ?.answer === answer.answer
                             }
                             onChange={() =>
                               handleRadioChange(
                                 section.title,
                                 question.id,
-                                answer
+                                answer.answer,
+                                answer.points
                               )
                             }
                             className="relative size-4 appearance-none rounded-full border border-gray-300 bg-white before:absolute before:inset-1 before:rounded-full before:bg-white checked:border-pink-600 checked:bg-pink-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:before:bg-gray-400 forced-colors:appearance-auto forced-colors:before:hidden [&:not(:checked)]:before:hidden"
@@ -196,7 +208,7 @@ export default function Form({ survey }: FormComponentProps) {
                             htmlFor={`${sectionIndex}-${question.id}-${index}`}
                             className="block text-sm/6 font-medium text-gray-900"
                           >
-                            {answer}
+                            {answer.answer}
                           </label>
                         </div>
                       ))}
