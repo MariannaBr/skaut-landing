@@ -5,7 +5,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/sunflower.png"
+            sizes="32x32"
+          />
           <meta name="robots" content="index, follow" />
         </Head>
         <body className="bg-white">

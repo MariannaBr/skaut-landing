@@ -9,18 +9,20 @@ import {
   formTitleTime,
   paragraph,
   survey,
-  urlPageImg
+  urlPageImg,
+  titlePage,
+  urlImg300x200
 } from "../lib/defaults";
 
 const Homepage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{titlePage}</title>
         <meta name="description" content={paragraph} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={paragraph} />
-        <meta property="og:image" content={urlPageImg} />
+        <meta property="og:image" content={urlImg300x200} />
         <meta property="og:url" content={domain} />
         <meta property="og:type" content="website" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
