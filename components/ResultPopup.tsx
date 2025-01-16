@@ -14,7 +14,8 @@ import {
   titleShareLink,
   titleShareFlower,
   titleShareAdvice,
-  titleShareQuestion
+  titleShareQuestion,
+  titleShare
 } from "../lib/defaults";
 
 type Props = {
@@ -28,7 +29,7 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
     (flower) => flower.type === flowerType
   )?.data;
 
-  const [copySuccess, setCopySuccess] = useState<boolean>(false);
+  const [shareSuccess, setShareSuccess] = useState<boolean>(false);
 
   const handleCopyLink = () => {
     const text =
@@ -41,11 +42,16 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        setCopySuccess(true);
+        setShareSuccess(true);
       })
       .catch(() => {
-        setCopySuccess(false);
+        setShareSuccess(false);
       });
+  };
+
+  const onShareClose = () => {
+    onClose();
+    setShareSuccess(false);
   };
 
   return (
@@ -104,7 +110,7 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                       </div>
                     </div>
                     <div className="mx-4 xl:mx-auto justify-center p-4 my-10 shadow-lg rounded-lg border-teal-200 border-2">
-                      {!copySuccess && (
+                      {!shareSuccess && (
                         <div>
                           <div className="text-center">
                             <div className="lg:mt-4">
@@ -120,13 +126,13 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                               className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-4 text-sm md:text-md font-semibold text-teal-700 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
                               onClick={handleCopyLink}
                             >
-                              Share
+                              {titleShare}
                             </button>
                           </div>
                         </div>
                       )}
 
-                      {copySuccess && (
+                      {shareSuccess && (
                         <div>
                           <div className="text-center">
                             <div className="lg:mt-4">
@@ -139,7 +145,7 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                             <button
                               type="button"
                               className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-teal-700 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
-                              onClick={onClose}
+                              onClick={onShareClose}
                             >
                               {titleClose}
                             </button>

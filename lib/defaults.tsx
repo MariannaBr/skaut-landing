@@ -1,10 +1,10 @@
 export const title = "How Do You Handle PMS?";
 export const titlePage = "PMS & ME";
 export const paragraph =
-  "You experience the changes  of the menstrual cycle in your own unique way. There are four distinct types, each symbolized by a beautiful flower. Which one resonates with you?";
+  "You experience the changes of the menstrual cycle in your own unique way. There are four distinct types, each symbolized by a beautiful flower. Which one resonates with you?";
 export const buttonText = "Let's Find Out";
 export const formTitle = "Discover Your Flower and Get Advice.";
-export const formTitleTime = "It Takes Less Than 2 Minutes.";
+export const formTitleTime = "It Takes Less Than 2 Minutes :)";
 export const titlePersonal = "Little Bit About You";
 export const titleName = "Name";
 export const titleEmail = "Email Address";
@@ -13,11 +13,12 @@ export const titleCancel = "Cancel";
 export const titleSubmit = "Submit";
 export const titleResult = "You Are";
 export const titleClose = "Close";
+export const titleShare = "Share";
 export const titleShareLink =
-  "Help your friend to discover her flower! Share your result with your bestfriend!";
+  "Share your results with your friends and help them discover their flowers!";
 export const titleSharedLink =
-  "Great! Link copied to your clipboard! You can now share it with your bestfriend!";
-export const titleShareFlower = "I'm ";
+  "Great! Link copied to your clipboard! You can now share it with your friends!";
+export const titleShareFlower = "My flower is ";
 export const titleShareAdvice = " and I got this advice: ";
 export const titleShareQuestion = " What flower are you? ";
 export const domain = "https://www.pmsandme.com/";
