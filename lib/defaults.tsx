@@ -2,8 +2,8 @@ export const title = "How Do You Handle PMS?";
 export const paragraph =
   "You experience the changes  of the menstrual cycle in your own unique way. There are four distinct types, each symbolized by a beautiful flower. Which one resonates with you?";
 export const buttonText = "Let's Find Out";
-export const formTitle =
-  "Discover Your Flower and Get Advice in Just 3 Minutes";
+export const formTitle = "Discover Your Flower and Get Advice.";
+export const formTitleTime = "It Takes Less Than 2 Minutes.";
 export const titlePersonal = "Little Bit About You";
 export const titleName = "Name";
 export const titleEmail = "Email Address";
@@ -42,759 +42,199 @@ export interface FormComponentProps {
 
 export const survey: SectionData[] = [
   {
-    title: "General Experience with the Menstrual Cycle",
+    title: "How is Your Mood?",
     questions: [
       {
-        question:
-          "How would you describe the impact of your menstrual cycle on your overall mood and mental state?",
+        question: "How does your cycle affect your mood?",
         id: "1_1",
         answers: [
           {
-            answer: "I don't notice any changes in mood or mental state.",
+            answer: "No changes.",
             points: 1
           },
           {
-            answer:
-              "I notice slight changes, but they don't affect my daily life.",
+            answer: "Small changes.",
             points: 2
           },
           {
-            answer:
-              "I experience noticeable mood changes that sometimes affect my daily life.",
+            answer: "Noticeable changes.",
             points: 3
           },
           {
-            answer:
-              "My mood changes are severe and significantly disrupt my daily life.",
+            answer: "Big changes.",
             points: 4
           }
         ]
       },
       {
-        question:
-          "Do you track changes in your mood or mental state during your cycle?",
+        question: "Do you feel anxious, sad or low energy around your period?",
         id: "1_2",
         answers: [
-          {
-            answer: "No, I don't notice any changes to track.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but I don't see strong patterns.",
-            points: 2
-          },
-          {
-            answer: "Yes, I've noticed patterns that vary during the cycle.",
-            points: 3
-          },
-          {
-            answer: "Yes, and the changes are consistent and impactful.",
-            points: 4
-          }
+          { answer: "Never.", points: 1 },
+          { answer: "Sometimes, but it's mild.", points: 2 },
+          { answer: "Often, and it's noticeable.", points: 3 },
+          { answer: "Very often, and it's intense.", points: 4 }
+        ]
+      },
+      {
+        question: "Does your confidence or motivation change?",
+        id: "1_3",
+        answers: [
+          { answer: "No, I feel steady all month.", points: 1 },
+          { answer: "Occasionally, but it's not a big deal.", points: 2 },
+          { answer: "Often, and it affects my energy.", points: 3 },
+          { answer: "Very often, and it disrupts my goals.", points: 4 }
         ]
       }
     ]
   },
   {
-    title: "Emotional Symptoms",
+    title: "How Does Your Body Feel?",
     questions: [
       {
-        question:
-          "How often do you experience mood swings (e.g., irritability, sadness, or anxiety) during your menstrual cycle?",
+        question: "How often do you get cramps, bloating, or feel tired?",
         id: "2_1",
         answers: [
-          {
-            answer: "Rarely or never.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but they are mild and manageable.",
-            points: 2
-          },
-          {
-            answer: "Frequently, and they are noticeable.",
-            points: 3
-          },
-          {
-            answer: "Very frequently, and they are severe and hard to manage.",
-            points: 4
-          }
+          { answer: "Rarely or never.", points: 1 },
+          { answer: "Sometimes, but it's mild.", points: 2 },
+          { answer: "Often, and it's noticeable.", points: 3 },
+          { answer: "Very often, and it disrupts my day.", points: 4 }
         ]
       },
       {
-        question:
-          "Do you experience feelings of anxiety, tension, or nervousness before or during your period?",
+        question: "Do you get strong cravings during your cycle?",
         id: "2_2",
         answers: [
-          {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but mildly.",
-            points: 2
-          },
-          {
-            answer: "Often, with noticeable intensity.",
-            points: 3
-          },
-          {
-            answer:
-              "Very often, with significant impact on my mental well-being.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Have you ever experienced depressive symptoms (e.g., sadness, hopelessness, or lack of energy) that correlate with your cycle?",
-        id: "2_3",
-        answers: [
-          {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but they don't interfere with my life.",
-            points: 2
-          },
-          {
-            answer: "Often, and they sometimes interfere with my life.",
-            points: 3
-          },
-          {
-            answer: "Very often, and they severely interfere with my life.",
-            points: 4
-          }
+          { answer: "Never.", points: 1 },
+          { answer: "Sometimes.", points: 2 },
+          { answer: "Often.", points: 3 },
+          { answer: "Very often.", points: 4 }
         ]
       }
     ]
   },
   {
-    title: "Physical Symptoms",
+    title: "How is Your Sleep?",
     questions: [
       {
         question:
-          "How often do you experience physical symptoms (e.g., cramps, bloating, fatigue) during your menstrual cycle?",
+          "Do you have trouble falling asleep or you feel overly tired?",
         id: "3_1",
         answers: [
-          {
-            answer: "Rarely or never.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but they are mild.",
-            points: 2
-          },
-          {
-            answer: "Often, and they are noticeable.",
-            points: 3
-          },
-          {
-            answer:
-              "Very often, and they significantly disrupt my daily activities.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Do you experience significant cravings for specific foods (e.g., sweets, salty snacks) during your cycle?",
-        id: "3_2",
-        answers: [
-          {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but they're not strong.",
-            points: 2
-          },
-          {
-            answer: "Often, and they are noticeable.",
-            points: 3
-          },
-          {
-            answer: "Very often, and they strongly affect my eating habits.",
-            points: 4
-          }
+          { answer: "No -I sleep well all the time.", points: 1 },
+          { answer: "Rarely, and it's not a big issue.", points: 2 },
+          { answer: "Yes, and it disrupts my rest.", points: 3 },
+          { answer: "Very often - it really affects how I sleep.", points: 4 }
         ]
       }
     ]
   },
   {
-    title: "Impact on Daily Life",
+    title: "How is Your Day Affected?",
     questions: [
       {
-        question:
-          "How would you describe the impact of your menstrual cycle on your daily routines (work, school, or social life)?",
+        question: "Does your cycle affect your work, school, or social life?",
         id: "4_1",
         answers: [
-          {
-            answer: "No impact at all.",
-            points: 1
-          },
-          {
-            answer: "Slight impact, but I can manage it easily.",
-            points: 2
-          },
-          {
-            answer: "Moderate impact that sometimes requires adjustments.",
-            points: 3
-          },
-          {
-            answer: "Severe impact that often disrupts my daily life.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Do you ever feel the need to take time off or limit activities because of emotional or physical symptoms related to your menstrual cycle?",
-        id: "4_2",
-        answers: [
-          {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but rarely.",
-            points: 2
-          },
-          {
-            answer: "Often, but only for a short period.",
-            points: 3
-          },
-          {
-            answer:
-              "Very often, and it significantly affects my ability to function.",
-            points: 4
-          }
+          { answer: "Not at all.", points: 1 },
+          { answer: "A little, but I handle it easily.", points: 2 },
+          { answer: "Sometimes, I need to adjust.", points: 3 },
+          { answer: "Often, it disrupts my day.", points: 4 }
         ]
       }
     ]
   },
   {
-    title: "Perception of Hormonal Sensitivity",
+    title: "How Do You Care for Yourself?",
     questions: [
       {
         question:
-          "How sensitive do you feel your body and mind are to hormonal changes during your cycle?",
+          "Do you use rest, exercise, or medication to handle your symptoms?",
         id: "5_1",
         answers: [
-          {
-            answer: "Not at all sensitive.",
-            points: 1
-          },
-          {
-            answer: "Slightly sensitive.",
-            points: 2
-          },
-          {
-            answer: "Moderately sensitive.",
-            points: 3
-          },
-          {
-            answer: "Extremely sensitive.",
-            points: 4
-          }
+          { answer: "Never - I don't need to.", points: 1 },
+          { answer: "Rarely, just for mild discomfort.", points: 2 },
+          { answer: "Often, and they help a lot.", points: 3 },
+          { answer: "Very often - I can't function without them.", points: 4 }
+        ]
+      },
+      {
+        question: "Have you ever sought professional help?",
+        id: "5_2",
+        answers: [
+          { answer: "No, I've never needed it.", points: 1 },
+          { answer: "No, but I've thought about it.", points: 2 },
+          { answer: "Yes, and it helped a bit.", points: 3 },
+          { answer: "Yes, and it's been essential.", points: 4 }
         ]
       }
     ]
   },
   {
-    title: "Emotional and Behavioral Changes",
+    title: "How is Your Relationship Affected?",
     questions: [
       {
         question:
-          "Do you find yourself feeling more emotional (e.g., crying easily or feeling overwhelmed) during certain parts of your menstrual cycle?",
+          "Do you notice more conflicts or irritability around your period?",
         id: "6_1",
         answers: [
-          {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and it's manageable.",
-            points: 2
-          },
-          {
-            answer: "Sometimes, and it's noticeable.",
-            points: 3
-          },
-          {
-            answer: "Often, and it's difficult to manage.",
-            points: 4
-          }
+          { answer: "Never.", points: 1 },
+          { answer: "Rarely, and it's mild.", points: 2 },
+          { answer: "Sometimes, and it causes tension.", points: 3 },
+          { answer: "Often, and it leads to challenges.", points: 4 }
         ]
       },
       {
         question:
-          "Do you experience heightened conflict in your relationships during certain phases of your cycle (e.g., feeling more irritable or reactive)?",
+          "Should your partner be informed about your hormonal changes?",
         id: "6_2",
         answers: [
+          { answer: "No, I prefer to handle it myself.", points: 1 },
           {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and it's mild.",
+            answer: "Yes, but only when necessary.",
             points: 2
           },
           {
-            answer: "Sometimes, and it causes occasional tension.",
+            answer: "Yes, it's important for them to understand.",
             points: 3
           },
           {
-            answer: "Often, and it leads to significant challenges.",
+            answer: "Yes, it improves our relationship.",
             points: 4
           }
         ]
       },
       {
-        question:
-          "Do you notice a change in your confidence, motivation, or productivity at different stages of your cycle?",
+        question: "Would you like more support from your partner?",
         id: "6_3",
         answers: [
+          { answer: "No, I can manage on my own.", points: 1 },
+          { answer: "Occasionally, but not often.", points: 2 },
+          { answer: "Yes, I would appreciate more support.", points: 3 },
           {
-            answer: "No, I feel the same throughout the month.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but it doesn't significantly affect me.",
-            points: 2
-          },
-          {
-            answer: "Often, and it affects my energy and focus.",
-            points: 3
-          },
-          {
-            answer:
-              "Very often, and it significantly disrupts my work or goals.",
+            answer: "Yes, I need consistent support to feel better.",
             points: 4
           }
         ]
       },
       {
-        question:
-          "Do you find it harder to concentrate or make decisions during specific parts of your menstrual cycle?",
+        question: "How would you prefer your partner to support you?",
         id: "6_4",
         answers: [
           {
-            answer: "No, my concentration is consistent.",
+            answer: "No support needed.",
             points: 1
           },
           {
-            answer: "Occasionally, but it's manageable.",
+            answer: "Emotional support - listening and comforting me.",
             points: 2
           },
           {
-            answer: "Often, and it noticeably impacts my work or studies.",
+            answer: "Physical support - helping with tasks.",
             points: 3
           },
           {
-            answer:
-              "Very often, and it severely disrupts my ability to think clearly.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Coping Mechanisms and Self-Care",
-    questions: [
-      {
-        question:
-          "How often do you rely on specific coping mechanisms (e.g., rest, exercise, medications, or supplements) to manage menstrual-related symptoms?",
-        id: "7_1",
-        answers: [
-          {
-            answer: "Never—I don't need any.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and only for mild discomfort.",
-            points: 2
-          },
-          {
-            answer: "Often, and they help manage noticeable symptoms.",
-            points: 3
-          },
-          {
-            answer: "Very often, and they're necessary for me to function.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Do you feel like you can control or predict how your mental and physical state will change during your cycle?",
-        id: "7_2",
-        answers: [
-          {
-            answer: "Yes, I feel completely in control.",
-            points: 1
-          },
-          {
-            answer: "Yes, but I only experience mild changes.",
-            points: 2
-          },
-          {
-            answer:
-              "Somewhat—it's predictable but can still be difficult to manage.",
-            points: 3
-          },
-          {
-            answer:
-              "No, I feel out of control and unable to predict how I'll feel.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "How often do you plan your activities, work, or social life around your menstrual cycle?",
-        id: "7_3",
-        answers: [
-          {
-            answer: "Never—I don't need to.",
-            points: 1
-          },
-          {
-            answer: "Rarely, but I might adjust a little.",
-            points: 2
-          },
-          {
-            answer: "Often, as symptoms impact my ability to perform.",
-            points: 3
-          },
-          {
-            answer: "Very often, as symptoms heavily dictate what I can do.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Physical and Energy Levels",
-    questions: [
-      {
-        question:
-          "Do you experience changes in your energy levels during your menstrual cycle (e.g., feeling more tired or fatigued)?",
-        id: "8_1",
-        answers: [
-          {
-            answer: "Never—I feel consistent energy throughout.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and it's mild.",
-            points: 2
-          },
-          {
-            answer: "Often, and it's noticeable.",
-            points: 3
-          },
-          {
-            answer: "Very often, and it significantly impacts my daily life.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Do you experience sleep disturbances (e.g., insomnia, excessive tiredness) at any point in your cycle?",
-        id: "8_2",
-        answers: [
-          {
-            answer: "Never—I sleep consistently well.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and it doesn't affect me much.",
-            points: 2
-          },
-          {
-            answer: "Often, and it affects my ability to rest.",
-            points: 3
-          },
-          {
-            answer: "Very often, and it disrupts my sleep significantly.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "How frequently do you experience physical pain (e.g., headaches, cramps, or muscle tension) that impacts your emotional state?",
-        id: "8_3",
-        answers: [
-          {
-            answer: "Never.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and it's manageable.",
-            points: 2
-          },
-          {
-            answer: "Often, and it affects my mood noticeably.",
-            points: 3
-          },
-          {
-            answer:
-              "Very often, and it severely impacts my mood and mental state.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Perception of Symptoms",
-    questions: [
-      {
-        question:
-          "How often do you feel that your mental or physical symptoms are misunderstood or dismissed by others (e.g., friends, family, coworkers)?",
-        id: "9_1",
-        answers: [
-          {
-            answer:
-              "Never—I don't experience symptoms that require explanation.",
-            points: 1
-          },
-          {
-            answer: "Rarely—it's not much of an issue for me.",
-            points: 2
-          },
-          {
-            answer: "Sometimes, and it can feel frustrating.",
-            points: 3
-          },
-          {
-            answer:
-              "Often, and it's a significant source of stress or isolation.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Do you feel that hormonal changes during your cycle impact your self-image or confidence?",
-        id: "9_2",
-        answers: [
-          {
-            answer: "Never—I feel the same throughout my cycle.",
-            points: 1
-          },
-          {
-            answer: "Rarely, and it's not noticeable.",
-            points: 2
-          },
-          {
-            answer: "Often, and it affects how I see myself.",
-            points: 3
-          },
-          {
-            answer: "Very often, and it significantly lowers my confidence.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Have you ever sought professional help (e.g., doctor, therapist) to manage symptoms related to your menstrual cycle?",
-        id: "9_3",
-        answers: [
-          {
-            answer: "No, I've never needed to.",
-            points: 1
-          },
-          {
-            answer: "No, but I've considered it.",
-            points: 2
-          },
-          {
-            answer: "Yes, and it's been somewhat helpful.",
-            points: 3
-          },
-          {
-            answer: "Yes, and it's been essential for managing my symptoms.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Long-Term Impact",
-    questions: [
-      {
-        question:
-          "Over the past year, how would you rate the consistency of your menstrual-related symptoms?",
-        id: "10_1",
-        answers: [
-          {
-            answer: "They've been consistently mild or nonexistent.",
-            points: 1
-          },
-          {
-            answer:
-              "They've been mostly mild with occasional moderate symptoms.",
-            points: 2
-          },
-          {
-            answer:
-              "They've been consistently moderate with some severe episodes.",
-            points: 3
-          },
-          {
-            answer: "They've been consistently severe and disruptive.",
-            points: 4
-          }
-        ]
-      },
-      {
-        question:
-          "Do you feel your symptoms are improving, worsening, or staying the same over time?",
-        id: "10_2",
-        answers: [
-          {
-            answer: "I don't experience symptoms.",
-            points: 1
-          },
-          {
-            answer: "They've stayed the same or improved slightly.",
-            points: 2
-          },
-          {
-            answer: "They've become slightly worse.",
-            points: 3
-          },
-          {
-            answer: "They've become significantly worse over time.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Impact on the Relationship",
-    questions: [
-      {
-        question:
-          "Do you feel that your hormonal changes during your menstrual cycle have an impact on your relationship with your partner?",
-        id: "11_1",
-        answers: [
-          {
-            answer: "No, there is no noticeable impact on our relationship.",
-            points: 1
-          },
-          {
-            answer: "Sometimes, but it doesn't create any significant issues.",
-            points: 2
-          },
-          {
-            answer: "Yes, it causes occasional tension or misunderstandings.",
-            points: 3
-          },
-          {
-            answer:
-              "Yes, it significantly affects our relationship and causes frequent challenges.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Desire for Support from Partner",
-    questions: [
-      {
-        question:
-          "Would you like more support from your partner during the emotional or physical challenges of your menstrual cycle?",
-        id: "12_1",
-        answers: [
-          {
-            answer: "No, I feel like I can manage on my own.",
-            points: 1
-          },
-          {
-            answer: "Occasionally, but it's not something I need often.",
-            points: 2
-          },
-          {
-            answer:
-              "Yes, I would appreciate more emotional or physical support.",
-            points: 3
-          },
-          {
-            answer:
-              "Yes, I need consistent support to feel better during my cycle.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Ideal Form of Support from Partner",
-    questions: [
-      {
-        question:
-          "In what ways would you like your partner to support you during your menstrual cycle (e.g., emotionally, physically, helping with tasks)?",
-        id: "13_1",
-        answers: [
-          {
-            answer: "No support needed—I'm fine handling it myself.",
-            points: 1
-          },
-          {
-            answer: "Emotional support—listening to me and offering comfort.",
-            points: 2
-          },
-          {
-            answer:
-              "Physical support—helping with tasks or providing comfort measures (e.g., heat packs, food).",
-            points: 3
-          },
-          {
-            answer:
-              "Both emotional and physical support—active involvement in managing symptoms.",
-            points: 4
-          }
-        ]
-      }
-    ]
-  },
-  {
-    title: "Partner's Knowledge of Hormonal Changes",
-    questions: [
-      {
-        question:
-          "Do you think your partner should be notified about the hormonal changes you experience during your menstrual cycle, so they can better understand and support you?",
-        id: "14_1",
-        answers: [
-          {
-            answer: "No, I prefer to handle it on my own.",
-            points: 1
-          },
-          {
-            answer:
-              "Yes, but only when necessary or during significant changes.",
-            points: 2
-          },
-          {
-            answer:
-              "Yes, I think it's important for my partner to understand and be informed.",
-            points: 3
-          },
-          {
-            answer:
-              "Yes, I believe that open communication about these changes will improve our relationship.",
+            answer: "Both emotional and physical support.",
             points: 4
           }
         ]
@@ -802,6 +242,24 @@ export const survey: SectionData[] = [
     ]
   }
 ];
+
+export const pointCategories = () => {
+  let numQuestions = 0;
+
+  survey.forEach((section) => {
+    numQuestions += section.questions.length;
+  });
+
+  const minPoints = numQuestions;
+  const maxPoints = numQuestions * 4;
+  const range = Math.ceil((maxPoints - minPoints) / 4);
+
+  const rangeA = minPoints + range / 2;
+  const rangeB = rangeA + range;
+  const rangeC = maxPoints - range;
+
+  return { A: rangeA, B: rangeB, C: rangeC };
+};
 
 export type Flower = {
   flower: string;

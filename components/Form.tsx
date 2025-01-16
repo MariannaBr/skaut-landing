@@ -7,7 +7,8 @@ import {
   titleEmail,
   titleName,
   titlePersonal,
-  titleSubmit
+  titleSubmit,
+  pointCategories
 } from "../lib/defaults";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../lib/firebaseConfig.js";
@@ -80,9 +81,11 @@ export default function Form({ survey }: FormComponentProps) {
         totalPoints += answer.points;
       });
     });
-    if (totalPoints < 44) return "A";
-    if (totalPoints < 72) return "B";
-    if (totalPoints < 93) return "C";
+
+    const categories = pointCategories();
+    if (totalPoints < categories.A) return "A";
+    if (totalPoints < categories.B) return "B";
+    if (totalPoints < categories.C) return "C";
     return "D";
   };
 
