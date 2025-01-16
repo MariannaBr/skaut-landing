@@ -103,48 +103,50 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                         </p>
                       </div>
                     </div>
-                    {!copySuccess && (
-                      <div>
-                        <div className="text-center">
-                          <div className="mt-6">
-                            <p className="text-sm text-teal-500 md:text-lg font-semibold">
-                              {titleShareLink}
-                            </p>
+                    <div className="mx-4 xl:mx-auto justify-center p-4 my-10 shadow-lg rounded-lg border-teal-200 border-2">
+                      {!copySuccess && (
+                        <div>
+                          <div className="text-center">
+                            <div className="lg:mt-4">
+                              <p className="text-sm text-teal-500 md:text-lg font-semibold">
+                                {titleShareLink}
+                              </p>
+                            </div>
+                          </div>
+
+                          <div className="mt-5 sm:mt-16">
+                            <button
+                              type="button"
+                              className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-4 text-sm md:text-md font-semibold text-teal-700 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
+                              onClick={handleCopyLink}
+                            >
+                              Share
+                            </button>
                           </div>
                         </div>
+                      )}
 
-                        <div className="mt-5 sm:mt-16">
-                          <button
-                            type="button"
-                            className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-gray-600 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
-                            onClick={handleCopyLink}
-                          >
-                            Share
-                          </button>
-                        </div>
-                      </div>
-                    )}
-
-                    {copySuccess && (
-                      <div>
-                        <div className="text-center">
-                          <div className="mt-6">
-                            <p className="text-sm text-teal-500 md:text-lg font-semibold">
-                              {titleSharedLink}
-                            </p>
+                      {copySuccess && (
+                        <div>
+                          <div className="text-center">
+                            <div className="lg:mt-4">
+                              <p className="text-sm text-teal-500 md:text-lg font-semibold">
+                                {titleSharedLink}
+                              </p>
+                            </div>
+                          </div>
+                          <div className="mt-5 sm:mt-16">
+                            <button
+                              type="button"
+                              className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-teal-700 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
+                              onClick={onClose}
+                            >
+                              {titleClose}
+                            </button>
                           </div>
                         </div>
-                        <div className="mt-5 sm:mt-16">
-                          <button
-                            type="button"
-                            className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-gray-600 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
-                            onClick={onClose}
-                          >
-                            {titleClose}
-                          </button>
-                        </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 </DialogPanel>
               </TransitionChild>

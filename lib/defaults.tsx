@@ -13,9 +13,10 @@ export const titleCancel = "Cancel";
 export const titleSubmit = "Submit";
 export const titleResult = "You Are";
 export const titleClose = "Close";
-export const titleShareLink = "Help your friend to discover her flower!";
+export const titleShareLink =
+  "Help your friend to discover her flower! Share your result with your bestfriend!";
 export const titleSharedLink =
-  "Great! Link copied to your clipboard! You can now paste it to share with your bestfriend!";
+  "Great! Link copied to your clipboard! You can now share it with your bestfriend!";
 export const titleShareFlower = "I'm ";
 export const titleShareAdvice = " and I got this advice: ";
 export const titleShareQuestion = " What flower are you? ";
