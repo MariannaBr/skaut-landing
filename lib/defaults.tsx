@@ -12,6 +12,15 @@ export const titleCancel = "Cancel";
 export const titleSubmit = "Submit";
 export const titleResult = "You Are";
 export const titleClose = "Close";
+export const titleShareLink = "Help your friend to discover her flower!";
+export const titleSharedLink =
+  "Great! Link copied to your clipboard! You can now paste it to share with your bestfriend!";
+export const titleShareFlower = "I'm ";
+export const titleShareAdvice = " and I got this advice: ";
+export const titleShareQuestion = " What flower are you? ";
+export const domain = "pmsandme.com";
+export const urlPageImg =
+  "https://storage.googleapis.com/communitiesplatform-pictures/pms_and_me_pics/graph_with_flowers.png";
 
 export type SectionData = {
   title: string;

@@ -1,11 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import {
   Dialog,
   DialogPanel,
   Transition,
   TransitionChild
 } from "@headlessui/react";
-import { flowerTypes, titleClose, titleResult } from "../lib/defaults";
+import {
+  domain,
+  flowerTypes,
+  titleClose,
+  titleResult,
+  titleSharedLink,
+  titleShareLink,
+  titleShareFlower,
+  titleShareAdvice,
+  titleShareQuestion
+} from "../lib/defaults";
 
 type Props = {
   flowerType: string;
@@ -17,6 +27,26 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
   const selectedFlower = flowerTypes.find(
     (flower) => flower.type === flowerType
   )?.data;
+
+  const [copySuccess, setCopySuccess] = useState<boolean>(false);
+
+  const handleCopyLink = () => {
+    const text =
+      titleShareFlower +
+      selectedFlower?.flower +
+      titleShareAdvice +
+      selectedFlower?.advice +
+      titleShareQuestion +
+      domain;
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopySuccess(true);
+      })
+      .catch(() => {
+        setCopySuccess(false);
+      });
+  };
 
   return (
     <>
@@ -73,15 +103,48 @@ const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
                         </p>
                       </div>
                     </div>
-                  </div>
-                  <div className="mt-5 sm:mt-16">
-                    <button
-                      type="button"
-                      className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-gray-600 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
-                      onClick={onClose}
-                    >
-                      {titleClose}
-                    </button>
+                    {!copySuccess && (
+                      <div>
+                        <div className="text-center">
+                          <div className="mt-6">
+                            <p className="text-sm text-teal-500 md:text-lg font-semibold">
+                              {titleShareLink}
+                            </p>
+                          </div>
+                        </div>
+
+                        <div className="mt-5 sm:mt-16">
+                          <button
+                            type="button"
+                            className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-gray-600 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
+                            onClick={handleCopyLink}
+                          >
+                            Share
+                          </button>
+                        </div>
+                      </div>
+                    )}
+
+                    {copySuccess && (
+                      <div>
+                        <div className="text-center">
+                          <div className="mt-6">
+                            <p className="text-sm text-teal-500 md:text-lg font-semibold">
+                              {titleSharedLink}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="mt-5 sm:mt-16">
+                          <button
+                            type="button"
+                            className="inline-flex w-full justify-center rounded-md bg-teal-100 px-3 py-2 text-sm md:text-md font-semibold text-gray-600 shadow-sm hover:bg-teal-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-200"
+                            onClick={onClose}
+                          >
+                            {titleClose}
+                          </button>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </DialogPanel>
               </TransitionChild>
