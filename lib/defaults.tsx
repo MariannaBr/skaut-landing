@@ -18,7 +18,7 @@ export const titleSharedLink =
 export const titleShareFlower = "I'm ";
 export const titleShareAdvice = " and I got this advice: ";
 export const titleShareQuestion = " What flower are you? ";
-export const domain = "pmsandme.com";
+export const domain = "https://www.pmsandme.com/";
 export const urlPageImg =
   "https://storage.googleapis.com/communitiesplatform-pictures/pms_and_me_pics/graph_with_flowers.png";
 
