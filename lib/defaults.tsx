@@ -1,7 +1,7 @@
 export const title = "How Do You Handle PMS?";
 export const titlePage = "PMS & ME";
 export const paragraph =
-  "You experience the changes of the menstrual cycle in your own unique way. There are four distinct types, each symbolized by a beautiful flower. Which one resonates with you?";
+  "You experience the changes of the menstrual cycle in your own unique way. There are four distinct types, each symbolized by a beautiful flower. Which one are you?";
 export const buttonText = "Let's Find Out";
 export const formTitle = "Discover Your Flower and Get Advice.";
 export const formTitleTime = "It Takes Less Than 2 Minutes :)";
@@ -135,7 +135,7 @@ export const survey: SectionData[] = [
           "Do you have trouble falling asleep or you feel overly tired?",
         id: "3_1",
         answers: [
-          { answer: "No -I sleep well all the time.", points: 1 },
+          { answer: "No, I sleep well all the time.", points: 1 },
           { answer: "Rarely, and it's not a big issue.", points: 2 },
           { answer: "Yes, and it disrupts my rest.", points: 3 },
           { answer: "Very often - it really affects how I sleep.", points: 4 }
