@@ -9,7 +9,6 @@ import {
   formTitleTime,
   paragraph,
   survey,
-  urlPageImg,
   titlePage,
   urlImg300x200
 } from "../lib/defaults";
