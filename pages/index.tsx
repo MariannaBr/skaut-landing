@@ -1,18 +1,18 @@
 import React from "react";
 import Head from "next/head";
-import Hero from "../components/Hero";
-import Form from "../components/Form";
+//import Hero from "../components/Hero";
+//import Form from "../components/Form";
 import {
   title,
   domain,
-  formTitle,
-  formTitleTime,
+  //formTitle,
+  //formTitleTime,
   paragraph,
-  survey,
+  //survey,
   titlePage,
   urlImg300x200
 } from "../lib/defaults";
-import { InlineWidget } from "react-calendly";
+//import { InlineWidget } from "react-calendly";
 
 const Homepage: React.FC = () => {
   return (
