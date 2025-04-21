@@ -29,7 +29,7 @@ const Homepage: React.FC = () => {
         <meta name="robots" content="index, follow" />
       </Head>
       <div className="bg-white pb-20">
-        <Hero />
+        {/* <Hero /> */}
         <div id="form-section" className="mx-4 py-6 lg:py-20">
           <h1 className="text-pretty text-2xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
             Testing Calendly
