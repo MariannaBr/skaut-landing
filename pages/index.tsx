@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 //import Hero from "../components/Hero";
 //import Form from "../components/Form";
@@ -12,9 +12,40 @@ import {
   titlePage,
   urlImg300x200
 } from "../lib/defaults";
-//import { InlineWidget } from "react-calendly";
+import { InlineWidget } from "react-calendly";
+
+// const [calendlyLink, setCalendlyLink] = useState('');
+
+// const setCalendlyLink = (location) => {
+//   ;
+// };
 
 const Homepage: React.FC = () => {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const locations = [
+    {
+      title: "Lower Pacific Heights",
+      address: "2211 Post St, 3rd Floor - Suite 300\nSan Francisco, CA 94115",
+      img: "/loc_lower_pacific_heights.jpg"
+    },
+    {
+      title: "Downtown SF",
+      address: "490 Post St - Suite 939, San Francisco, CA 94102",
+      img: "/loc_downtown_sf.jpg"
+    },
+    {
+      title: "Menlo Park",
+      address: "120 Santa Margarita Ave Building B, Menlo Park, CA 94025",
+      img: "/loc_menlo_park.jpg"
+    }
+  ];
+
+  const calendlyLinks = [
+    "https://calendly.com/d/cnb6-pxf-jct/lower-pacific-heights-sf",
+    "https://calendly.com/d/cq4r-6wt-2w4/downtown-sf",
+    "https://calendly.com/d/cn28-nxz-rhd/menlo-park"
+  ];
   return (
     <>
       <Head>
@@ -31,44 +62,116 @@ const Homepage: React.FC = () => {
       <div className="bg-white pb-20">
         {/* <Hero /> */}
         <div id="form-section" className="mx-4 py-6 lg:py-20">
-          <h1 className="text-pretty text-2xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
+          <h1 className="text-pretty text-2xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl mb-20">
             Testing Calendly
           </h1>
-          <div className="absolute left-0 top-0 p-0 pb-5 pr-5 border">
-            <div className="overflow-hidden rounded-lg shadow-md">
-              <div className="post-image">
-                <a
-                  href="https://maps.app.goo.gl/D8LUuNrsvuH6zBkd9"
-                  target="_blank"
-                  rel="noopener noreferrer"
+          <p className="text-pretty text-md text-center text-gray-500 mt-1 mb-10">
+            This will be added to the web app for the patient, after his
+            workflow is done and he is able to book an appointment.
+          </p>
+
+          <div className="p-6 mx-auto max-w-7xl">
+            <div className="mx-auto grid grid-cols-3 gap-x-20">
+              {locations.map((loc, index) => (
+                <div
+                  key={index}
+                  className={`cursor-pointer overflow-hidden rounded-2xl shadow-lg w-72 ${
+                    selectedIndex === index ? "ring-2 ring-blue-500" : ""
+                  }`}
+                  onClick={() => setSelectedIndex(index)}
                 >
-                  <img
-                    alt="Lower Pacific Heights"
-                    src="./__assets/images/loc_lower_pacific_heights.jpg"
-                    className="w-full"
-                  />
-                </a>
+                  <div className="overflow-hidden rounded-2xl shadow-lg w-72">
+                    <img
+                      src={loc.img}
+                      alt={loc.title}
+                      className="w-full h-48 object-cover"
+                    />
+                    <div className="p-4">
+                      <h2 className="text-xl font-semibold">{loc.title}</h2>
+                      <p className="mt-2 text-gray-700 whitespace-pre-line">
+                        {loc.address}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {selectedIndex !== null && (
+              <div className="mt-10 border-t pt-6">
+                <InlineWidget
+                  url={calendlyLinks[selectedIndex]}
+                  styles={{ height: "700px" }}
+                />
               </div>
-              <div className="p-4">
-                <h2 className="text-xl font-bold mb-2">
-                  Lower Pacific Heights
-                </h2>
-                <p className="mb-3">
-                  2211 Post St, 3rd Floor - Suite 300
-                  <br />
-                  San Francisco, CA 94115
-                </p>
-                <a
-                  href="https://maps.app.goo.gl/D8LUuNrsvuH6zBkd9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 underline normal-case"
-                >
-                  View in maps
-                </a>
+            )}
+          </div>
+
+          {/* Location Buttons */}
+          {/* <div className="flex">
+            <div className="mx-auto grid grid-cols-3 gap-x-14">
+              <div className="flex mx-auto lg:mx-0">
+                <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
+                  <div className="post-image">
+                    <img
+                      alt="Lower Pacific Heights"
+                      src="/loc_lower_pacific_heights.jpg"
+                      className="w-full rounded-t-2xl object-cover h-full"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h2 className="text-xl font-bold mb-2">
+                      Lower Pacific Heights
+                    </h2>
+                    <p className="mb-3">
+                      2211 Post St, 3rd Floor - Suite 300
+                      <br />
+                      San Francisco, CA 94115
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex mx-auto lg:mx-0">
+                <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
+                  <div className="post-image">
+                    <img
+                      alt="Lower Pacific Heights"
+                      src="/loc_downtown_sf.jpg"
+                      className="w-full rounded-t-2xl object-cover h-full"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h2 className="text-xl font-bold mb-2">Downtown SF</h2>
+                    <p className="mb-3">
+                      490 Post St - Suite 939
+                      <br />
+                      San Francisco, CA 94102
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex mx-auto lg:mx-0">
+                <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
+                  <div className="post-image">
+                    <img
+                      alt="Lower Pacific Heights"
+                      src="/loc_menlo_park.jpg"
+                      className="w-full rounded-t-2xl object-cover h-full"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h2 className="text-xl font-bold mb-2">Menlo Park</h2>
+                    <p className="mb-3">
+                      120 Santa Margarita Ave Building B,
+                      <br />
+                      Menlo Park, CA 94025
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </div> */}
+          {/* Location Buttons */}
           {/* <h2 className="text-pretty text-xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
             {formTitle}
           </h2>
