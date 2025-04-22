@@ -34,6 +34,41 @@ const Homepage: React.FC = () => {
           <h1 className="text-pretty text-2xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
             Testing Calendly
           </h1>
+          <div className="absolute left-0 top-0 p-0 pb-5 pr-5 border">
+            <div className="overflow-hidden rounded-lg shadow-md">
+              <div className="post-image">
+                <a
+                  href="https://maps.app.goo.gl/D8LUuNrsvuH6zBkd9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    alt="Lower Pacific Heights"
+                    src="./__assets/images/loc_lower_pacific_heights.jpg"
+                    className="w-full"
+                  />
+                </a>
+              </div>
+              <div className="p-4">
+                <h2 className="text-xl font-bold mb-2">
+                  Lower Pacific Heights
+                </h2>
+                <p className="mb-3">
+                  2211 Post St, 3rd Floor - Suite 300
+                  <br />
+                  San Francisco, CA 94115
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/D8LUuNrsvuH6zBkd9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 underline normal-case"
+                >
+                  View in maps
+                </a>
+              </div>
+            </div>
+          </div>
           {/* <h2 className="text-pretty text-xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
             {formTitle}
           </h2>
