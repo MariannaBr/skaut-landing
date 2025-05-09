@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import Head from "next/head";
-//import Hero from "../components/Hero";
-//import Form from "../components/Form";
+import Hero from "../components/Hero";
+import Form from "../components/Form";
 import {
   title,
   domain,
-  //formTitle,
-  //formTitleTime,
+  formTitle,
+  formTitleTime,
   paragraph,
-  //survey,
+  survey,
   titlePage,
   urlImg300x200
 } from "../lib/defaults";
-import { InlineWidget } from "react-calendly";
+//import { InlineWidget } from "react-calendly";
 
 // const [calendlyLink, setCalendlyLink] = useState('');
 
@@ -60,8 +60,27 @@ const Homepage: React.FC = () => {
         <meta name="robots" content="index, follow" />
       </Head>
       <div className="bg-white pb-20">
-        {/* <Hero /> */}
-        <div id="form-section" className="mx-4 py-6 lg:py-20">
+        <Hero />
+
+        <h2 className="text-pretty text-xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
+          {formTitle}
+        </h2>
+        <p className="text-pretty text-md text-center text-gray-500 mt-1">
+          {formTitleTime}
+        </p>
+      </div>
+
+      <div className="flex mx-4 xl:mx-auto justify-center max-w-7xl px-4 py-10 shadow-2xl shadow-teal-200 rounded-2xl">
+        <Form survey={survey} />
+      </div>
+    </>
+  );
+};
+
+export default Homepage;
+
+{
+  /* <div id="form-section" className="mx-4 py-6 lg:py-20">
           <h1 className="text-pretty text-2xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl mb-20">
             Testing Calendly
           </h1>
@@ -105,10 +124,14 @@ const Homepage: React.FC = () => {
                 />
               </div>
             )}
-          </div>
+          </div> */
+}
 
-          {/* Location Buttons */}
-          {/* <div className="flex">
+{
+  /* Location Buttons */
+}
+{
+  /* <div className="flex">
             <div className="mx-auto grid grid-cols-3 gap-x-14">
               <div className="flex mx-auto lg:mx-0">
                 <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
@@ -170,27 +193,21 @@ const Homepage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div> */}
-          {/* Location Buttons */}
-          {/* <h2 className="text-pretty text-xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
-            {formTitle}
-          </h2>
-          <p className="text-pretty text-md text-center text-gray-500 mt-1">
-            {formTitleTime}
-          </p> */}
-        </div>
+          </div> */
+}
+{
+  /* Location Buttons */
+}
+{
+  /* Calendly inline widget begin */
+}
+{
+  /* <InlineWidget url="https://calendly.com/brezinova-marianna/test-meeting" /> */
+}
 
-        {/* Calendly inline widget begin */}
-        {/* <InlineWidget url="https://calendly.com/brezinova-marianna/test-meeting" /> */}
-
-        {/*Calendly inline widget end */}
-
-        {/* <div className="flex mx-4 xl:mx-auto justify-center max-w-7xl px-4 py-10 shadow-2xl shadow-teal-200 rounded-2xl">
-          <Form survey={survey} />
-        </div> */}
-      </div>
-    </>
-  );
-};
-
-export default Homepage;
+{
+  /*Calendly inline widget end */
+}
+{
+  /* </div> */
+}
