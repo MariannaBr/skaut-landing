@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Form from "../components/Form";
@@ -21,31 +21,31 @@ import {
 // };
 
 const Homepage: React.FC = () => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  // const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const locations = [
-    {
-      title: "Lower Pacific Heights",
-      address: "2211 Post St, 3rd Floor - Suite 300\nSan Francisco, CA 94115",
-      img: "/loc_lower_pacific_heights.jpg"
-    },
-    {
-      title: "Downtown SF",
-      address: "490 Post St - Suite 939, San Francisco, CA 94102",
-      img: "/loc_downtown_sf.jpg"
-    },
-    {
-      title: "Menlo Park",
-      address: "120 Santa Margarita Ave Building B, Menlo Park, CA 94025",
-      img: "/loc_menlo_park.jpg"
-    }
-  ];
+  // const locations = [
+  //   {
+  //     title: "Lower Pacific Heights",
+  //     address: "2211 Post St, 3rd Floor - Suite 300\nSan Francisco, CA 94115",
+  //     img: "/loc_lower_pacific_heights.jpg"
+  //   },
+  //   {
+  //     title: "Downtown SF",
+  //     address: "490 Post St - Suite 939, San Francisco, CA 94102",
+  //     img: "/loc_downtown_sf.jpg"
+  //   },
+  //   {
+  //     title: "Menlo Park",
+  //     address: "120 Santa Margarita Ave Building B, Menlo Park, CA 94025",
+  //     img: "/loc_menlo_park.jpg"
+  //   }
+  // ];
 
-  const calendlyLinks = [
-    "https://calendly.com/d/cnb6-pxf-jct/lower-pacific-heights-sf",
-    "https://calendly.com/d/cq4r-6wt-2w4/downtown-sf",
-    "https://calendly.com/d/cn28-nxz-rhd/menlo-park"
-  ];
+  // const calendlyLinks = [
+  //   "https://calendly.com/d/cnb6-pxf-jct/lower-pacific-heights-sf",
+  //   "https://calendly.com/d/cq4r-6wt-2w4/downtown-sf",
+  //   "https://calendly.com/d/cn28-nxz-rhd/menlo-park"
+  // ];
   return (
     <>
       <Head>
