@@ -10,42 +10,10 @@ import {
   paragraph,
   survey,
   titlePage,
-  urlImg300x200
+  urlImg300x200,
 } from "../lib/defaults";
-//import { InlineWidget } from "react-calendly";
-
-// const [calendlyLink, setCalendlyLink] = useState('');
-
-// const setCalendlyLink = (location) => {
-//   ;
-// };
 
 const Homepage: React.FC = () => {
-  // const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
-
-  // const locations = [
-  //   {
-  //     title: "Lower Pacific Heights",
-  //     address: "2211 Post St, 3rd Floor - Suite 300\nSan Francisco, CA 94115",
-  //     img: "/loc_lower_pacific_heights.jpg"
-  //   },
-  //   {
-  //     title: "Downtown SF",
-  //     address: "490 Post St - Suite 939, San Francisco, CA 94102",
-  //     img: "/loc_downtown_sf.jpg"
-  //   },
-  //   {
-  //     title: "Menlo Park",
-  //     address: "120 Santa Margarita Ave Building B, Menlo Park, CA 94025",
-  //     img: "/loc_menlo_park.jpg"
-  //   }
-  // ];
-
-  // const calendlyLinks = [
-  //   "https://calendly.com/d/cnb6-pxf-jct/lower-pacific-heights-sf",
-  //   "https://calendly.com/d/cq4r-6wt-2w4/downtown-sf",
-  //   "https://calendly.com/d/cn28-nxz-rhd/menlo-park"
-  // ];
   return (
     <>
       <Head>
@@ -59,155 +27,111 @@ const Homepage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
       </Head>
-      <div className="bg-white pb-20">
-        <Hero />
 
-        <h2 className="text-pretty text-xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl ">
-          {formTitle}
-        </h2>
-        <p className="text-pretty text-md text-center text-gray-500 mt-1">
-          {formTitleTime}
-        </p>
-      </div>
+      <div className="h-screen bg-gray-50 flex flex-col overflow-hidden">
+        <div className="flex-1 overflow-y-auto py-6 sm:py-8">
+          <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+            <h2 className="text-center text-base/7 font-semibold text-indigo-600">
+              Deploy faster
+            </h2>
+            <p className="mx-auto mt-2 max-w-lg text-balance text-center text-3xl font-semibold tracking-tight text-gray-950 sm:text-4xl">
+              Everything you need to deploy your app
+            </p>
+            <div className="mt-6 grid gap-3 sm:mt-8 lg:grid-cols-3 lg:grid-rows-2">
+              <div className="relative lg:row-span-2">
+                <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                  <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                      Mobile friendly
+                    </p>
+                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      Anim aute id magna aliqua ad ad non deserunt sunt. Qui
+                      irure qui lorem cupidatat commodo.
+                    </p>
+                  </div>
+                  <div className="relative min-h-[20rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                    <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                      <img
+                        alt=""
+                        src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png"
+                        className="size-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute inset-px rounded-lg shadow outline outline-black/5 lg:rounded-l-[2rem]" />
+              </div>
+              <div className="relative max-lg:row-start-1">
+                <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]" />
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                  <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                      Performance
+                    </p>
+                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                      maiores impedit.
+                    </p>
+                  </div>
+                  <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
+                    <img
+                      alt=""
+                      src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-performance.png"
+                      className="w-full max-lg:max-w-xs"
+                    />
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute inset-px rounded-lg shadow outline outline-black/5 max-lg:rounded-t-[2rem]" />
+              </div>
+              <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+                <div className="absolute inset-px rounded-lg bg-white" />
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+                  <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                      Security
+                    </p>
+                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      Morbi viverra dui mi arcu sed. Tellus semper adipiscing
+                      suspendisse semper morbi.
+                    </p>
+                  </div>
+                  <div className="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
+                    <img
+                      alt=""
+                      src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-security.png"
+                      className="h-[min(152px,40cqw)] object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute inset-px rounded-lg shadow outline outline-black/5" />
+              </div>
 
-      <div className="flex mx-4 xl:mx-auto justify-center max-w-7xl px-4 py-10 shadow-2xl shadow-teal-200 rounded-2xl">
-        <Form survey={survey} />
+              {/* Form */}
+              <div className="relative lg:row-span-2">
+                <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
+                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                  <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                    <p className="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
+                      {survey.question}
+                    </p>
+                    <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                      Help us improve by sharing your feedback. Your input is
+                      valuable to us.
+                    </p>
+                  </div>
+                  <div className="flex-1 px-8 pb-8 sm:px-10">
+                    <Form />
+                  </div>
+                </div>
+                <div className="pointer-events-none absolute inset-px rounded-lg shadow outline outline-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
 };
 
 export default Homepage;
-
-{
-  /* <div id="form-section" className="mx-4 py-6 lg:py-20">
-          <h1 className="text-pretty text-2xl text-center font-semibold tracking-tight text-gray-900 md:text-3xl mb-20">
-            Testing Calendly
-          </h1>
-          <p className="text-pretty text-md text-center text-gray-500 mt-1 mb-10">
-            This will be added to the web app for the patient, after his
-            workflow is done and he is able to book an appointment.
-          </p>
-
-          <div className="p-6 mx-auto max-w-7xl">
-            <div className="mx-auto grid grid-cols-3 gap-x-20">
-              {locations.map((loc, index) => (
-                <div
-                  key={index}
-                  className={`cursor-pointer overflow-hidden rounded-2xl shadow-lg w-72 ${
-                    selectedIndex === index ? "ring-2 ring-blue-500" : ""
-                  }`}
-                  onClick={() => setSelectedIndex(index)}
-                >
-                  <div className="overflow-hidden rounded-2xl shadow-lg w-72">
-                    <img
-                      src={loc.img}
-                      alt={loc.title}
-                      className="w-full h-48 object-cover"
-                    />
-                    <div className="p-4">
-                      <h2 className="text-xl font-semibold">{loc.title}</h2>
-                      <p className="mt-2 text-gray-700 whitespace-pre-line">
-                        {loc.address}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {selectedIndex !== null && (
-              <div className="mt-10 border-t pt-6">
-                <InlineWidget
-                  url={calendlyLinks[selectedIndex]}
-                  styles={{ height: "700px" }}
-                />
-              </div>
-            )}
-          </div> */
-}
-
-{
-  /* Location Buttons */
-}
-{
-  /* <div className="flex">
-            <div className="mx-auto grid grid-cols-3 gap-x-14">
-              <div className="flex mx-auto lg:mx-0">
-                <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
-                  <div className="post-image">
-                    <img
-                      alt="Lower Pacific Heights"
-                      src="/loc_lower_pacific_heights.jpg"
-                      className="w-full rounded-t-2xl object-cover h-full"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h2 className="text-xl font-bold mb-2">
-                      Lower Pacific Heights
-                    </h2>
-                    <p className="mb-3">
-                      2211 Post St, 3rd Floor - Suite 300
-                      <br />
-                      San Francisco, CA 94115
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex mx-auto lg:mx-0">
-                <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
-                  <div className="post-image">
-                    <img
-                      alt="Lower Pacific Heights"
-                      src="/loc_downtown_sf.jpg"
-                      className="w-full rounded-t-2xl object-cover h-full"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h2 className="text-xl font-bold mb-2">Downtown SF</h2>
-                    <p className="mb-3">
-                      490 Post St - Suite 939
-                      <br />
-                      San Francisco, CA 94102
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="flex mx-auto lg:mx-0">
-                <div className="flex flex-col items-start justify-between shadow-lg rounded-2xl">
-                  <div className="post-image">
-                    <img
-                      alt="Lower Pacific Heights"
-                      src="/loc_menlo_park.jpg"
-                      className="w-full rounded-t-2xl object-cover h-full"
-                    />
-                  </div>
-                  <div className="p-4">
-                    <h2 className="text-xl font-bold mb-2">Menlo Park</h2>
-                    <p className="mb-3">
-                      120 Santa Margarita Ave Building B,
-                      <br />
-                      Menlo Park, CA 94025
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> */
-}
-{
-  /* Location Buttons */
-}
-{
-  /* Calendly inline widget begin */
-}
-{
-  /* <InlineWidget url="https://calendly.com/brezinova-marianna/test-meeting" /> */
-}
-
-{
-  /*Calendly inline widget end */
-}
-{
-  /* </div> */
-}

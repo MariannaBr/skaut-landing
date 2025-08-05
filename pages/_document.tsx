@@ -13,7 +13,7 @@ class MyDocument extends Document {
           />
           <meta name="robots" content="index, follow" />
         </Head>
-        <body className="bg-white">
+        <body className="bg-white max-h-screen">
           <Main />
           <NextScript />
         </body>

@@ -3,7 +3,7 @@ import {
   Dialog,
   DialogPanel,
   Transition,
-  TransitionChild
+  TransitionChild,
 } from "@headlessui/react";
 import {
   domain,
@@ -15,7 +15,7 @@ import {
   titleShareFlower,
   titleShareAdvice,
   titleShareQuestion,
-  titleShare
+  titleShare,
 } from "../lib/defaults";
 
 type Props = {
@@ -26,7 +26,7 @@ type Props = {
 
 const ResultPopup: React.FC<Props> = ({ flowerType, isOpen, onClose }) => {
   const selectedFlower = flowerTypes.find(
-    (flower) => flower.type === flowerType
+    flower => flower.type === flowerType
   )?.data;
 
   const [shareSuccess, setShareSuccess] = useState<boolean>(false);
