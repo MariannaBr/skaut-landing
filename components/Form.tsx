@@ -44,7 +44,7 @@ export default function Form() {
     <>
       <form onSubmit={handleSubmit} className="h-full flex flex-col">
         <div className="flex-1">
-          <fieldset className="my-10">
+          <fieldset className="my-6">
             <div className="space-y-6">
               {survey.answers.map((answer, index) => (
                 <div key={index} className="flex items-center gap-x-3">
